@@ -1,0 +1,373 @@
+.MainPage {
+    background-color: var(--BackgroundColor);
+    font-family: Inter;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+    /* fix for Chrome */
+    font-weight: 500;
+}
+
+p {
+    color: var(--TextColor);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#contact {
+    scroll-margin-top: 10vh;
+    /* offset in pixels */
+}
+
+/* NAVBAR CODE */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    background-color: var(--BackgroundColor);
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6vh;
+    padding: 1vh 1vw;
+    z-index: 10;
+}
+
+.navbar .logo {
+    height: 5vh;
+    width: auto;
+    margin-right: 2rem;
+}
+
+.links {
+    display: flex;
+    width: 100%;
+    color: var(--TextColorDark);
+}
+
+.navbar .links>a {
+    color: var(--TextColorDark);
+    text-decoration: none;
+    padding: 0 1rem;
+    font-size: 1.2rem;
+}
+
+.navbar .links>a:hover {
+    color: #84816E;
+}
+
+.navbar .links>.right {
+    margin-left: auto;
+}
+
+
+
+/* HAMBURGER CODE */
+.hamburger {
+    display: none;
+}
+
+.break {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .hamburger {
+        height: 5vh;
+        width: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: 0 !important;
+    }
+
+    .enabled.navbar {
+        height: auto;
+        /* navbar can now grow */
+        flex-wrap: wrap;
+        /* forces children into new rows */
+        align-items: flex-start;
+    }
+
+    .enabled.navbar .break {
+        display: block;
+        flex-basis: 100%;
+    }
+
+    .links {
+        display: none;
+    }
+
+    .navbar {
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    .enabled.navbar .links {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+        gap: 1vh;
+    }
+
+    .enabled.navbar .links>a {
+        text-align: center;
+        border: 1px solid #6e6c62;
+        width: 90vw;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    .enabled.navbar .links>a:first-child {
+        margin-top: 1vh;
+    }
+
+    .enabled.navbar .links>.right {
+        margin-left: 0;
+    }
+
+    .TextContainer {
+        margin-top: 5vh;
+    }
+}
+
+
+/* TEXT CODE */
+.MainContainer {
+    margin: 9vh 2vw 2vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.RowTextContainer {
+    display: flex;
+    align-self: start;
+    flex-direction: row;
+    align-items: center;
+    gap: clamp(0.2rem, 4vw, 5rem);
+    color: var(--TextColorDark);
+}
+
+.name {
+    align-self: start;
+    font-size: var(--TitleFontSize);
+    font-weight: var(--TitleFontWeight);
+    margin-right: 29px;
+    margin: 0;
+    color: var(--TextColorDark);
+}
+
+
+/* LINE AND DATE CODE */
+.UnderLined {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    width: 100%;
+}
+
+.UnderLined>div:first-child,
+.line {
+    /* width: 95vw; 
+    background-color: #AAAAAA; 
+    height: 1px; */
+
+    display: inline-block;
+    padding-bottom: 1px;
+    /* space for underline */
+    background-image: linear-gradient(to right,
+            transparent 0%,
+            currentColor 30%,
+            currentColor 70%,
+            transparent 100%);
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 100% 1px;
+    /* thickness of underline */
+}
+
+.UnderLined>.DateAndName>p {
+    font-weight: var(--DateAndNameFontWeight);
+    font-size: var(--DateAndNameFontSize);
+}
+
+.UnderLined>div:first-child {
+    width: 100%;
+    background-color: #AAAAAA;
+    height: 1px;
+}
+
+.UnderLined>.DateAndName {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    width: 100%;
+}
+
+.UnderLined>.DateAndName> :first-child {
+    margin-right: auto;
+}
+
+/* GRID */
+.ImageContainer {
+    width: 100% !important;
+    max-width: 100% !important;
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 2vw;
+    margin-bottom: 2vh;
+}
+
+.ImageContainer .span2 {
+    grid-row: span 2;
+    aspect-ratio: auto;
+}
+
+/* ITEM WRAPPER */
+.ImageContainer div {
+    width: 100%;
+    aspect-ratio: 4/3;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* IMAGES */
+.ImageContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.ImageContainer div:hover img:not(.NoAnimation *) {
+    transform: scale(1.1);
+}
+
+/* Grid container */
+
+.contact-section {
+    padding: 100px;
+    background-color: #6e6c62;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* 3 columns */
+    gap: 10px;
+    /* space between items */
+}
+
+.grid-item {
+    background-color: var(--BackgroundColor);
+    padding: 25px;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.2s;
+    text-decoration: none;
+    /* removes underline */
+    color: #333333;
+    /* link color */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    /* space between title + description */
+}
+
+.grid-item:hover {
+    opacity: 0.8;
+}
+
+.item-title {
+    font-size: 1.4rem;
+}
+
+.item-description {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* For the Contact email section */
+
+.item-emailbutton-with-text {
+    display: block;
+    margin-right: auto;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 2vh;
+}
+
+.item-text {
+    font-size: 1rem;
+    opacity: 0.9;
+    max-width: 500px;
+}
+
+.item-button {
+    background-color: var(--TextColorDark);
+    color: var(--BackgroundColor);
+
+    padding: 12px 24px;
+    border: none;
+    border-radius: 100px;
+    /* curved edges */
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+    max-width: 250px;
+    text-align: center;
+}
+
+.item-button::after {
+    content: "CarmenYau17@gmail.com";
+}
+
+.item-button:hover::after {
+    content: "Click to copy";
+}
+
+.item-button.copied::after {
+    content: "Copied!";
+}
+
+.item-button.copied:hover::after {
+    content: "Copied!";
+}
+
+
+/* Responsive: stack on smaller screens */
+@media (max-width: 384px) {
+
+    /* 768 */
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 20vw) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.TextAndImage {
+    display: flex;
+    align-self: start;
+    flex-direction: row;
+    align-items: center;
+    gap: clamp(1rem, 10vw, 1rem);
+    color: var(--TextColorDark);
+    margin-bottom: 1vh;
+}

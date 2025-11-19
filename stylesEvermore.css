@@ -1,0 +1,42 @@
+.GridLayout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "Desc infoObject"
+    "DescText infoObject"
+    "DescText ."
+    "DescText .";
+}
+.Description {
+    margin: 0;
+    grid-area: Desc;
+    font-weight: var(--DateAndNameFontWeight);
+    font-size: var(--DateAndNameFontSize);
+}
+.ImageContainer .stretch{
+    grid-row: span 2;
+}
+.ImageContainer div {
+    aspect-ratio: auto;
+}
+#title {
+    font-size: var(--TitleFontSize);
+    font-weight: var(--TitleFontWeight);
+}
+
+.DecsText {
+    font-size: 1rem !important;
+    grid-area: DescText;
+    margin-right: 1em;
+}
+.infoObject {
+    grid-area: infoObject;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    row-gap: 0.4rem;
+}
+.infoObject p{
+    border-bottom: 1px solid;
+    margin: 0;
+}

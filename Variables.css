@@ -1,0 +1,11 @@
+:root {
+    --BackgroundColor: #f0eddf;
+
+    --TitleFontWeight: 480;
+    --TitleFontSize: 4rem;  
+    --DateAndNameFontWeight: 700;
+    --DateAndNameFontSize: 1.5rem;
+
+    --TextColor: rgb(110, 108, 98);
+    --TextColorDark: rgb(29, 28, 19);
+}

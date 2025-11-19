@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Website</title>
+    <script src="button.js"></script>
+    <script src="copyText.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./Variables.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico">
+</head>
+
+<body class="MainPage" id="portfolio">
+
+        <!-- the navigation bar -->
+        <nav id="navbar" class="navbar">
+            <img class="logo" src="/images/logo.png">
+            <img class="hamburger" src="/images/hamburger.png" onclick="hamburger()">
+            <div class="break"></div>
+            <div class="links">
+                <a href="#portfolio">Portfolio</a>
+                <a class="right" href="#works">Works</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+
+        <div class="MainContainer">
+
+            <p class="name">Carmen Yau</p>
+            <div class="RowTextContainer">
+                <p style="color : #6e6c62;  font-size: 1.2em; margin-top:2px;">Intro</p>
+                <p>I'm a graphic design student specialising in product design, <br> and branding with an illustrative
+                    visual communication.</p>
+            </div>
+
+            <div class="UnderLined">
+                <div></div>
+                <div class="DateAndName" id="works">
+                    <p>PRODUCT DESIGN</p>
+                    <p>2024-2025</p>
+                </div>
+            </div>
+
+            <div>
+                <div class="UnderLined">
+                    <div></div>
+                    <div class="DateAndName">
+                        <p>PROJECTS</p>
+                        <p>2021-2024</p>
+                    </div>
+                </div>
+                <div class="ImageContainer">
+                    <a href="Pages/evermoor.html"><div><img src="./images/billboard.png"></div></a>
+                    <a href="Pages/posters.html"><div><img src="./images/poster.png"></div></a>
+                </div>
+            </div>
+
+            <div>
+                <div class="UnderLined">
+                    <div></div>
+                    <div class="DateAndName">
+                        <p>COLLECTIONS</p>
+                        <p>2021-2024</p>
+                    </div>
+                </div>
+                <div class="ImageContainer">
+                    <div>
+                        <img src="./images/duck.png">
+                    </div>
+                    <div>
+                        <img src="./images/flow.png">
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="UnderLined" id="about">
+                    <div></div>
+                    <div class="DateAndName">
+                        <p>ABOUT</p>
+                    </div>
+                </div>
+
+                <div class="TextAndImage">
+                    <div class="item-text" height="200vh"> 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna 
+                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna 
+                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
+                    <div>
+                        <img src="./images/Carmen.png" height="200vh" style="border-radius: 110px;">
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="UnderLined" id="contact">
+                    <div></div>
+                    <div class="DateAndName">
+                        <p>CONTACT</p>
+                    </div>
+                </div>
+
+                <div class="item-emailbutton-with-text">
+                    <div class="item-text" style="gap: 8px;">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                        sed do eiusmod tempor incididunt ut labore et dolore magna 
+                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                        ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </div>
+
+                    <div class="item-button" onclick="copyText('CarmenYau17@gmail.com')"></div>
+                </div>
+
+                <div class="UnderLined" id="contact">
+                    <div></div>
+                </div>
+
+                <div class="grid-container">
+
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/in/carmen-yau-564665311/" target="_blank" class="grid-item">
+                        <div class="item-title">LinkedIn</div>
+                        <div class="item-description">See my qualification</div>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/c.yau.design" target="_blank" class="grid-item">
+                        <div class="item-title">Instagram</div>
+                        <div class="item-description">Follow me for updates</div>
+                    </a>
+
+                </div>
+            </div>
+
+        </div>
+</body>
+</html>
