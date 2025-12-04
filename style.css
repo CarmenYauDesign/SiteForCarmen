@@ -85,6 +85,10 @@ html {
         margin-right: 0 !important;
     }
 
+    .navbar .logo {
+        height: 5vh;
+    }
+
     .enabled.navbar {
         height: auto;
         /* navbar can now grow */
