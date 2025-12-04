@@ -8,4 +8,8 @@
 
     --TextColor: rgb(110, 108, 98);
     --TextColorDark: rgb(29, 28, 19);
+
+    --rise-distance: 24px;
+    --duration: 1400ms;
+    --ease: cubic-bezier(.2,.9,.2,1);
 }
