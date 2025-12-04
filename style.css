@@ -39,7 +39,7 @@ html {
 }
 
 .navbar .logo {
-    height: 5vh;
+    height: 2vh;
     width: auto;
     margin-right: 2rem;
 }
@@ -160,6 +160,33 @@ html {
     margin-right: 29px;
     margin: 0;
     color: var(--TextColorDark);
+
+    display: inline-block;
+
+    transform: translateY(var(--rise-distance));
+    opacity: 0;
+    animation: rise-up var(--duration) var(--ease) forwards;
+}
+
+.PopUpHeaderText {
+    animation-delay: 850ms; 
+    color : #6e6c62;  
+    font-size: 1.2em; 
+    margin-top: 2px;
+    
+    display: inline-block;
+
+    transform: translateY(var(--rise-distance));
+    opacity: 0;
+    animation: rise-up var(--duration) var(--ease) forwards;
+}
+
+.PopUpText {
+    display: inline-block;
+
+    transform: translateY(var(--rise-distance));
+    opacity: 0;
+    animation: rise-up var(--duration) var(--ease) forwards;
 }
 
 
@@ -371,3 +398,11 @@ html {
     color: var(--TextColorDark);
     margin-bottom: 1vh;
 }
+
+/* Animate text rise up */
+  @keyframes rise-up {
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
