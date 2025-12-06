@@ -389,17 +389,29 @@ html {
     margin-bottom: 1vh;
 }
 
-/* Animate text rise up */
-
-.rise {
-  transform: translateY(var(--rise-distance));
-  opacity: 0;
-  animation: rise-up var(--duration) var(--ease) forwards;
+/* Have images displayed instead of title */
+#ImageAsTitle {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
 }
 
-  @keyframes rise-up {
+#ImageAsTitle img {
+    width: 40vw; /* adjust as needed */
+    height: auto;
+}
+
+/* Animate text rise up */
+.rise {
+    transform: translateY(var(--rise-distance));
+    opacity: 0;
+    animation: rise-up var(--duration) var(--ease) forwards;
+}
+
+@keyframes rise-up {
     to {
-      transform: translateY(0);
-      opacity: 1;
+        transform: translateY(0);
+        opacity: 1;
     }
-  }
+}
