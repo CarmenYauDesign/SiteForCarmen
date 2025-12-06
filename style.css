@@ -311,6 +311,8 @@ html {
     font-size: 16px;
     cursor: pointer;
     transition: 0.2s;
+    width: 250px;
+    content: "CarmenYau17@gmail.com";
     max-width: 250px;
     text-align: center;
 }
@@ -446,6 +448,10 @@ html {
 
 /* RESPONSIVE CODE */
 @media screen and (max-width: 600px) {
+
+    .item-button {
+        align-self: center;
+    }
 
     .MainContainer {
         margin: 3vh 3vw 5vw;
