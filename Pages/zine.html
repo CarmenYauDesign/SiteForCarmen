@@ -24,15 +24,26 @@
 
 <body class="MainPage">
 
-    <div id="navbar"></div>
+    <!-- the navigation bar -->
+    <nav id="navbar" class="navbar">
+        <img class="logo" src="./images/assets/logo.png">
+        <img class="hamburger" src="./images/assets/hamburger.png" onclick="hamburger()">
 
-    <script>
-        fetch('navbar.html')
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('navbar').innerHTML = data;
-        });
-    </script>
+        <div class="center-container">
+            <div class="videocontainer">
+                <video src="./images/assets/logospin.webm" autoplay loop muted playsinline></video>
+            </div>
+        </div>
+
+
+        <div class="break"></div>
+        <div class="links">
+            <a href="#portfolio">Portfolio</a>
+            <a class="right" href="#works">Works</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
 
     <div class="MainContainer">
         <div>

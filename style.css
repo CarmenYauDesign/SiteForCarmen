@@ -76,6 +76,23 @@ html {
     display: none;
 }
 
+/* Spinning image code */
+.spin {
+    width: 10%;          /* adjust size */
+    height: auto;
+    object-fit: cover;
+    animation: spin 10s linear infinite; /* slow, continuous rotation */
+    aspect-ratio: 1 / 1;
+    justify-content: center;
+}
+
+/* Keyframes for spinning */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* RESPONSIVE CODE */
 @media screen and (max-width: 600px) {
     .hamburger {
         height: 5vh;
@@ -87,6 +104,10 @@ html {
 
     .navbar .logo {
         height: 5vh;
+    }
+
+    .spin {
+        width: 100px;
     }
 
     .enabled.navbar {
@@ -458,17 +479,43 @@ html {
     margin-top: 2vh;
 }
 
-.spin {
-    width: 5%;          /* adjust size */
+.bigImage {
+    width: 100%;
     height: auto;
     object-fit: cover;
-    animation: spin 10s linear infinite; /* slow, continuous rotation */
-    aspect-ratio: 1 / 1;
-    justify-content: center;
+    border-radius: 5px;
 }
 
-/* Keyframes for spinning */
-@keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+/* The new central container */
+.center-container {
+    position: absolute;     /* overlay in the middle */
+    left: 50%;              /* center horizontally */
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    height: 100%;           /* same height as navbar */
+}
+
+/* Video wrapper */
+.videocontainer {
+    height: 100%;             /* scale relative to navbar height */
+    width: auto;        /* never overflow navbar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* 112 times 63   128 times 72   144 times 81   160times 90 176 times 99 */
+
+/* Video itself */
+.videocontainer video {
+    height: 63px;             /* scale relative to navbar height */
+    width: 112px;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;    /* scale proportionally to fit */
+    display: block;
+    transform: translateZ(0); /* sharp rendering */
+    will-change: transform;
+    pointer-events: none;
 }
