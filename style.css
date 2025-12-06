@@ -166,10 +166,6 @@ html {
     color: var(--TextColorDark);
 
     display: inline-block;
-
-    transform: translateY(var(--rise-distance));
-    opacity: 0;
-    animation: rise-up var(--duration) var(--ease) forwards;
 }
 
 .PopUpHeaderText {
@@ -179,18 +175,10 @@ html {
     margin-top: 2px;
     
     display: inline-block;
-
-    transform: translateY(var(--rise-distance));
-    opacity: 0;
-    animation: rise-up var(--duration) var(--ease) forwards;
 }
 
 .PopUpText {
     display: inline-block;
-
-    transform: translateY(var(--rise-distance));
-    opacity: 0;
-    animation: rise-up var(--duration) var(--ease) forwards;
 }
 
 
@@ -402,6 +390,13 @@ html {
 }
 
 /* Animate text rise up */
+
+.rise {
+  transform: translateY(var(--rise-distance));
+  opacity: 0;
+  animation: rise-up var(--duration) var(--ease) forwards;
+}
+
   @keyframes rise-up {
     to {
       transform: translateY(0);
