@@ -92,75 +92,16 @@ html {
     to { transform: rotate(360deg); }
 }
 
-/* RESPONSIVE CODE */
-@media screen and (max-width: 600px) {
-    .hamburger {
-        height: 5vh;
-        width: auto;
-        display: block;
-        margin-left: auto;
-        margin-right: 0 !important;
-    }
-
-    .navbar .logo {
-        height: 5vh;
-    }
-
-    .spin {
-        width: 100px;
-    }
-
-    .enabled.navbar {
-        height: auto;
-        /* navbar can now grow */
-        flex-wrap: wrap;
-        /* forces children into new rows */
-        align-items: flex-start;
-    }
-
-    .enabled.navbar .break {
-        display: block;
-        flex-basis: 100%;
-    }
-
-    .links {
-        display: none;
-    }
-
-    .navbar {
-        position: relative;
-        flex-wrap: wrap;
-    }
-
-    .enabled.navbar .links {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        align-items: center;
-        gap: 1vh;
-    }
-
-    .enabled.navbar .links>a {
-        text-align: center;
-        border: 1px solid #6e6c62;
-        width: 90vw;
-        padding: 5px;
-        border-radius: 5px;
-    }
-
-    .enabled.navbar .links>a:first-child {
-        margin-top: 1vh;
-    }
-
-    .enabled.navbar .links>.right {
-        margin-left: 0;
-    }
-
-    .TextContainer {
-        margin-top: 5vh;
-    }
+/* TEXT AND IMAGE SECTION */
+.TextAndImage {
+    display: flex;
+    align-self: start;
+    flex-direction: row;
+    align-items: center;
+    gap: clamp(1rem, 10vw, 1rem);
+    color: var(--TextColorDark);
+    margin-bottom: 1vh;
 }
-
 
 /* TEXT CODE */
 .MainContainer {
@@ -400,16 +341,6 @@ html {
     }
 }
 
-.TextAndImage {
-    display: flex;
-    align-self: start;
-    flex-direction: row;
-    align-items: center;
-    gap: clamp(1rem, 10vw, 1rem);
-    color: var(--TextColorDark);
-    margin-bottom: 1vh;
-}
-
 /* Have images displayed instead of title */
 #ImageAsTitle {
     display: flex;
@@ -488,34 +419,117 @@ html {
 
 /* The new central container */
 .center-container {
-    position: absolute;     /* overlay in the middle */
-    left: 50%;              /* center horizontally */
-    transform: translateX(-50%);
+
     display: flex;
     align-items: center;
-    height: 100%;           /* same height as navbar */
-}
-
-/* Video wrapper */
-.videocontainer {
-    height: 100%;             /* scale relative to navbar height */
-    width: auto;        /* never overflow navbar */
-    display: flex;
+    position: fixed;
     justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 6vh;
+    padding: 1vh 1vw;
+    z-index: 11;
+
+    pointer-events: none;
 }
 
-/* 112 times 63   128 times 72   144 times 81   160times 90 176 times 99 */
+.center-container video {
+    width: calc(100vw / 14);
+    height: calc((100vw / 14) * 9 / 16); /* apply 16:9 ratio */
 
-/* Video itself */
-.videocontainer video {
-    height: 63px;             /* scale relative to navbar height */
-    width: 112px;
-    aspect-ratio: 16 / 9;
-    object-fit: contain;    /* scale proportionally to fit */
+    object-fit: contain;   
     display: block;
-    transform: translateZ(0); /* sharp rendering */
-    will-change: transform;
+
     pointer-events: none;
+}
+
+/* RESPONSIVE CODE */
+@media screen and (max-width: 600px) {
+
+    .MainContainer {
+        margin: 3vh 3vw 5vw;
+    }
+
+    .center-container
+    {
+        height: 8vh;
+        position: absolute;
+    }
+
+    .center-container video {
+    width: calc(100vw / 10);          
+    height: calc((100vw / 10) * 9 / 16); 
+}
+
+    .hamburger {
+        height: 5vh;
+        width: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: 0 !important;
+    }
+
+    .navbar .logo {
+        height: 5vh;
+    }
+
+    .spin {
+        width: 100px;
+    }
+
+    .TextAndImage {
+        flex-direction: column;
+    }
+
+    .enabled.navbar {
+        height: auto;
+        /* navbar can now grow */
+        flex-wrap: wrap;
+        /* forces children into new rows */
+        align-items: flex-start;
+    }
+
+    .enabled.navbar .break {
+        display: block;
+        flex-basis: 100%;
+    }
+
+    .links {
+        display: none;
+        z-index: 12;
+    }
+
+    .navbar {
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    .enabled.navbar .links {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+        gap: 1vh;
+    }
+
+    .enabled.navbar .links>a {
+        text-align: center;
+        border: 1px solid #6e6c62;
+        width: 90vw;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    .enabled.navbar .links>a:first-child {
+        margin-top: 1vh;
+    }
+
+    .enabled.navbar .links>.right {
+        margin-left: 0;
+    }
+
+    .TextContainer {
+        margin-top: 5vh;
+    }
 }
