@@ -415,3 +415,60 @@ html {
         opacity: 1;
     }
 }
+
+/* UNEVEN IMAGE GRID CONTAINER */
+.image-grid {
+    display: flex;          
+    gap: 2vw;                 
+    width: 100%;              
+    justify-items: center;    
+    justify-content: center;
+}
+
+/* EACH COLUMN */
+.column {
+    display: flex;
+    flex-direction: column;    /* stack images vertically */
+    gap: 2vh;                  /* spacing between images */
+    flex: 1;                   /* equal width columns */
+}
+/* IMAGES IN COLUMNS */
+.column img {
+    width: 100%;            /* full width of column */
+    height: auto;           /* auto height preserves aspect ratio */
+    object-fit: cover;      /* optional: crop to fill container */
+    border-radius: 5px;
+}
+
+.left .tall,
+.right .tall {
+    aspect-ratio: 5 / 7;    /* width:height ratio */
+}
+
+.left .short,
+.right .short {
+    aspect-ratio: 5 / 3;
+}
+
+/* SPINNING IMAGE CLASS */
+.spinContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+}
+
+.spin {
+    width: 5%;          /* adjust size */
+    height: auto;
+    object-fit: cover;
+    animation: spin 10s linear infinite; /* slow, continuous rotation */
+    aspect-ratio: 1 / 1;
+    justify-content: center;
+}
+
+/* Keyframes for spinning */
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
