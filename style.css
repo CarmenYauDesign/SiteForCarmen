@@ -404,6 +404,16 @@ html {
     aspect-ratio: 5 / 3;
 }
 
+.leftBoardgame .tall,
+.rightBoardgame .tall {
+    aspect-ratio: 4 / 3;    /* width:height ratio */
+}
+
+.leftBoardgame .short,
+.rightBoardgame .short {
+    aspect-ratio: 32 / 21;
+}
+
 /* SPINNING IMAGE CLASS */
 .spinContainer {
     display: flex;
@@ -464,8 +474,8 @@ html {
     }
 
     .center-container video {
-    width: calc(100vw / 10);          
-    height: calc((100vw / 10) * 9 / 16); 
+    width: 96px;          
+    height: 54px; 
 }
 
     .hamburger {

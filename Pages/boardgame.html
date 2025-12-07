@@ -28,14 +28,6 @@
     <nav id="navbar" class="navbar">
         <img class="logo" src="./images/assets/logo.png">
         <img class="hamburger" src="./images/assets/hamburger.png" onclick="hamburger()">
-
-        <div class="center-container">
-            <div class="videocontainer">
-                <video src="./images/assets/logospin.webm" autoplay loop muted playsinline></video>
-            </div>
-        </div>
-
-
         <div class="break"></div>
         <div class="links">
             <a href="#portfolio">Portfolio</a>
@@ -44,6 +36,12 @@
             <a href="#contact">Contact</a>
         </div>
     </nav>
+
+    <div class="center-container">
+        <div class="videocontainer">
+            <video src="./images/assets/logospin.webm" autoplay loop muted playsinline></video>
+        </div>
+    </div>
 
     <div class="MainContainer">
         <div>
@@ -67,19 +65,35 @@
                 </div>
             </div>
 
-            <div><img class="bigImage rise" style="animation-delay: 1000ms;" src="./images/boardgame/boxes.png"></div>
+            <div class="image-grid rise" style="animation-delay: 1000ms;">
+                    <!-- LEFT COLUMN -->
+                    <div class="column leftBoardgame">
+                        <img src="./images/boardgame/OY OY OY.png" class="short">
+                        <img src="./images/boardgame/boardgame.png" class="tall">
+                    </div>
 
-            <div class="UnderLined rise" style="padding-top: 2vh; animation-delay: 1000ms;">
+                    <!-- RIGHT COLUMN -->
+                    <div class="column rightBoardgame">
+                        <img src="./images/boardgame/boardgameMain.png" class="tall">
+                        <img src="./images/boardgame/illustrations.png" class="short">
+                    </div>
+                </div>
+
+            <div><img class="bigImage rise" style="animation-delay: 1000ms; padding-top: 2vh;" src="./images/boardgame/fallingcards.png"></div>
+
+            
+
+            <!-- <div class="UnderLined rise" style="padding-top: 2vh; animation-delay: 1000ms;">
                 <div></div>
             </div>
 
-            <p class="Description" style="padding-top: 2vh">Research</p>
-                    <p class="DecsText">bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
-                        bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla bla 
-                </p>
+            <p class="Description" style="padding-top: 2vh"></p>
+                    <p class="DecsText"> 
+                </p> -->
 
-            <div class="ImageContainer NoAnimation">
-                
+            <div class="ImageContainer NoAnimation rise" style="animation-delay: 1000ms; padding-top: 2vh;">
+                <div><img src="./images/boardgame/path.png"></div>
+                <div><img src="./images/boardgame/pieces.png"></div>
             </div>
         </div>
         <div>
