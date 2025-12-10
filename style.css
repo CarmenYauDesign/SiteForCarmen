@@ -501,10 +501,11 @@ html {
 
     .TextAndImage {
         flex-direction: column;
+        align-items: start;
     }
 
     .TextAndImage img {
-        width: 95vw;
+        
     }
 
     .enabled.navbar {
